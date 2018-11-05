@@ -1,12 +1,13 @@
 import React, { Component } from "react";
 import { hot } from "react-hot-loader";
 import "./style.css";
+import Header from "./component/Header";
 
 class App extends Component{
   render(){
     return(
-      <div className="App">
-        <h1> Hello, world! What is up? </h1>
+      <div>
+        <Header />
       </div>
     );
   }
