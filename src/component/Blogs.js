@@ -1,13 +1,16 @@
 import React, { Component } from "react";
+import Blog from "./Blog";
 
 const blogs = [
   {
+    id: 0,
     title: "Sample Title",
     author: "Author Name",
     date: "time stamp",
     body: "This is the body of the blog were all the stuff you type in goes"
   },
   {
+    id: 1,
     title: "Test Title One",
     author: "Test Author Name",
     date: "Test time stamp",
@@ -17,22 +20,17 @@ const blogs = [
 
 
 export default class Blogs extends Component {
+
+  //for when redux is hooked up
+  // componentDidMount() {
+  //   this.props.blogs.fetchBlogs()
+  // }
+
   render() {
     return ( 
       <div>
         <h1>Blogs</h1>
-        {blogs.map((blog) => {
-          return (
-            <div key={blog.title}>
-              <h3>{blog.title}</h3>
-              <div>
-                <p>{blog.author}</p>
-                <p>{blog.date}</p>
-              </div>
-              <p>{blog.body}</p>
-            </div>
-          )
-        })}
+        <Blog blogs={blogs} />
       </div>
     );
   }

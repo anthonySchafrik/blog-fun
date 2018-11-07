@@ -1,14 +1,21 @@
 import React, { Component } from "react";
 import { hot } from "react-hot-loader";
+import { BrowserRouter, Route } from 'react-router-dom'
+
 import "./style.css";
-import Container from "./component/Container";
+import Blogs from "./component/Blogs";
+import Header from "./component/Header";
+
 
 class App extends Component{
   render(){
     return(
-      <div>
-        <Container />
-      </div>
+      <BrowserRouter>
+        <div>
+          <Header />
+          <Route path="/" component={Blogs} />
+        </div>
+      </BrowserRouter>
     );
   }
 }
