@@ -13,14 +13,18 @@ const blogs = [
     title: "Test Title One",
     author: "Test Author Name",
     date: "Test time stamp",
-    body: "Test This is the body of the blog were all the stuff you type in goes"
+    body:
+      "Test This is the body of the blog were all the stuff you type in goes"
   }
-]
+];
 
 export function fetchBlogs() {
   return {
     type: FETCH_BLOGS,
     payload: blogs
-  }
+  };
 }
 
+export function addBlog() {
+  console.log("addBloged fired");
+}

@@ -1,12 +1,11 @@
-import { connect } from 'react-redux'
+import { connect } from "react-redux";
 import React, { Component } from "react";
 import Blog from "../component/Blog";
 import { fetchBlogs } from "../actions";
 
 class Blogs extends Component {
-
   render() {
-    return ( 
+    return (
       <div>
         <h1>Blogs</h1>
         <Blog blogs={this.props.blogs} />
@@ -15,10 +14,8 @@ class Blogs extends Component {
   }
 }
 
-const mapStateToProps = state => ({
+const mapStateToProps = () => ({
   blogs: fetchBlogs()
-})
+});
 
-export default connect(
-  mapStateToProps,
-)(Blogs)
+export default connect(mapStateToProps)(Blogs);

@@ -9,7 +9,6 @@ export default class Header extends Component {
         <p className="header-items">Show All Blogs</p>
         <p className="header-items">Post Blog</p>
       </div>
-
-    )
+    );
   }
 }
