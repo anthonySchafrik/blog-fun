@@ -1,5 +1,4 @@
-import React, { Component } from "react";
-import Blog from "./Blog";
+export const FETCH_BLOGS = "fetch_blogs";
 
 const blogs = [
   {
@@ -18,20 +17,10 @@ const blogs = [
   }
 ]
 
-
-export default class Blogs extends Component {
-
-  //for when redux is hooked up
-  // componentDidMount() {
-  //   this.props.blogs.fetchBlogs()
-  // }
-
-  render() {
-    return ( 
-      <div>
-        <h1>Blogs</h1>
-        <Blog blogs={blogs} />
-      </div>
-    );
+export function fetchBlogs() {
+  return {
+    type: FETCH_BLOGS,
+    payload: blogs
   }
 }
+
