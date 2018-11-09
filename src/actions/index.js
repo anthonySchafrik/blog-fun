@@ -25,6 +25,6 @@ export function fetchBlogs() {
   };
 }
 
-export function addBlog() {
-  console.log("addBloged fired");
+export function addBlog(blogPost) {
+  blogs.push(blogPost);
 }
