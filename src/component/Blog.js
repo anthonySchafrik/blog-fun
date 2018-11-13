@@ -6,7 +6,7 @@ const Blog = ({ blogs }) => {
   }
   return blogs.payload.map(blog => {
     return (
-      <div key={blog.id}>
+      <div key={blog.title}>
         <h3>{blog.title}</h3>
         <div>
           <p>{blog.author}</p>
