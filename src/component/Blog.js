@@ -7,9 +7,9 @@ const Blog = ({ blogs }) => {
   return blogs.payload.map(blog => {
     return (
       <div key={blog.title}>
-        <h3>{blog.title}</h3>
+        <h2>{blog.title}</h2>
         <div>
-          <p>{blog.author}</p>
+          <h4>{blog.author}</h4>
           <p>{blog.date}</p>
         </div>
         <p>{blog.body}</p>

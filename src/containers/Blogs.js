@@ -6,7 +6,7 @@ import { fetchBlogs } from "../actions";
 class Blogs extends Component {
   render() {
     return (
-      <div>
+      <div id="blogs">
         <h1>Blogs</h1>
         <Blog blogs={this.props.blogs} />
       </div>

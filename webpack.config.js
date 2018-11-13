@@ -22,10 +22,11 @@ module.exports = {
   resolve: { extensions: ["*", ".js", ".jsx"] },
   output: {
     path: path.resolve(__dirname, "dist/"),
-    publicPath: "/dist/",
+    publicPath: "/",
     filename: "bundle.js"
   },
   devServer: {
+    historyApiFallback: true,
     contentBase: path.join(__dirname, "public/"),
     port: 2020,
     publicPath: "http://localhost:2020/dist/",
